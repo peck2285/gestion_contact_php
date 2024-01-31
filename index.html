@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Ajouter un contact</h2>
+    <form action="process.php" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" name="name" required placeholder="John Doe (au moins 2 caractères)">
+        <br>
+        <label for="email">E-mail :</label>
+        <input type="email" name="email" required placeholder="john.doe@example.com">
+        <br>
+        <label for="phone">Numéro de téléphone :</label>
+        <input type="tel" name="phone" required placeholder="123456789 (chiffres seulement)">
+        <br>
+        <input type="submit" value="Ajouter">
+    </form>
+
+    <h2>Liste des contacts</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>E-mail</th>
+                <th>Numéro de téléphone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Démarrer la session
+            session_start();
+
+            // Vérifier si la clé 'contacts' existe dans la session
+            if (isset($_SESSION['contacts'])) {
+                // Boucle à travers les contacts et les afficher
+                foreach ($_SESSION['contacts'] as $key => $contact) {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars($contact['name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($contact['email']) . "</td>";
+                    echo "<td>" . htmlspecialchars($contact['phone']) . "</td>";
+                    echo "<td>";
+                    echo "<a href='edit.php?id=$key'>Modifier</a> | ";
+                    echo "<a href='delete.php?id=$key'>Supprimer</a>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+            }
+            ?>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Bienvenue dans le Système de Gestion de Contacts ! Cette application web simple vous permet d'ajouter, de modifier et de supprimer des contacts de manière conviviale. Suivez ces étapes pour utiliser le système :
+
+1. Ajouter un Contact :
+
+Accédez à la page principale (index.html).
+Remplissez le formulaire avec les détails du nouveau contact, tels que le nom, l'e-mail et le numéro de téléphone.
+Cliquez sur le bouton "Ajouter" pour enregistrer le contact.
+2. Afficher la Liste des Contacts :
+
+Sur la même page principale, vous verrez une table affichant la liste des contacts enregistrés.
+Chaque ligne de la table représente un contact avec son nom, son e-mail et son numéro de téléphone.
+Vous trouverez également des liens "Modifier" et "Supprimer" pour chaque contact.
+3. Modifier un Contact :
+
+Cliquez sur le lien "Modifier" à côté du contact que vous souhaitez mettre à jour.
+Vous serez redirigé vers un formulaire pré-rempli avec les détails actuels du contact.
+Modifiez les informations nécessaires et cliquez sur "Enregistrer les modifications" pour mettre à jour le contact.
+4. Supprimer un Contact :
+
+Pour supprimer un contact, cliquez sur le lien "Supprimer" à côté du contact que vous souhaitez retirer.
+Le contact sera immédiatement supprimé de la liste.
